@@ -5,7 +5,7 @@ import { Room, RoomEvent } from 'livekit-client'
 // Constants
 // ─────────────────────────────────────────────────────────────
 
-const BACKEND_URL = 'http://localhost:8000'
+const BACKEND_URL = 'https://ai-agent-itlm.onrender.com'
 
 // Maps agent state names → stepper step index
 const STATE_TO_STEP = {
