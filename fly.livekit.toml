@@ -1,0 +1,35 @@
+app = "functiomed-livekit"
+primary_region = "sin"         
+
+[build]
+  image = "livekit/livekit-server:latest"
+
+[env]
+  LIVEKIT_KEYS = "APIq57S8iSGYuaD: fGmYHk0a6ukXbA5q6VAQBeidRlVYcFsVFrEjawly09q"   
+
+[[services]]
+  internal_port = 7880
+  protocol = "tcp"
+
+  [[services.ports]]
+    port = 7880
+    handlers = ["http"]
+
+[[services]]
+  internal_port = 7881
+  protocol = "tcp"
+
+  [[services.ports]]
+    port = 7881
+
+[[services]]
+  internal_port = 7882
+  protocol = "udp"
+
+  [[services.ports]]
+    port = 7882
+
+[[vm]]
+  memory = "256mb"
+  cpu_kind = "shared"
+  cpus = 1

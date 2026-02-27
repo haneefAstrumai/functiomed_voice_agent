@@ -1,0 +1,19 @@
+app = "functiomed-agent"
+primary_region = "sin"
+
+[build]
+  dockerfile = "Dockerfile"
+
+[env]
+  PYTHONPATH = "/app"
+  LIVEKIT_URL = "ws://functiomed-livekit.fly.dev:7880"
+  LIVEKIT_API_KEY = "devkey"
+  RERANKER_ENABLED = "0"
+
+[[vm]]
+  memory = "512mb"
+  cpu_kind = "shared"
+  cpus = 1
+
+[processes]
+  worker = "python voice_agent/agent.py dev"

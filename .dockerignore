@@ -1,0 +1,9 @@
+node_modules/
+frontend/voice_agent_frontend/node_modules/
+__pycache__/
+*.pyc
+env/
+.env
+data/faiss_index/
+database/functiomed.db
+.git/
